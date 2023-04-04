@@ -1,5 +1,15 @@
 import requests
 
+response_1 = requests.get("https://playground.learnqa.ru/ajax/api/compare_query_type")
+print(response_1.text)
+
+response_2 = requests.head("https://playground.learnqa.ru/ajax/api/compare_query_type", data={"method": "HEAD"})
+print(response_2.text)
+print(response_2.status_code)
+
+response_3 = requests.post("https://playground.learnqa.ru/ajax/api/compare_query_type", data={"method": "POST"})
+print(response_3.text)
+print(response_3.status_code)
 
 request_types = ["GET", "POST", "PUT", "DELETE"]
 
