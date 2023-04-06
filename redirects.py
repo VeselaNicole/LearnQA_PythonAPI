@@ -8,4 +8,3 @@ third_response = response
 print(first_response.url)
 print(second_response.url)
 print(third_response.url)
-

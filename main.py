@@ -1,4 +1,4 @@
 import requests
 
-response = requests.get("https://www.learnqa.ru/tpost/9rgayjrhrk-pro-model-osi-bistro-i-prosto")
-print(response.text)
+response = requests.get("https://playground.learnqa.ru/api/homework_header")
+print(response.headers.get('x-secret-homework-header'))
