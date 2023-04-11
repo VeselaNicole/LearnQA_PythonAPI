@@ -1,7 +1,7 @@
 import pytest
 import requests
 from lib.base_case import BaseCase
-from lib.assertions import  Assertions
+from lib.assertions import Assertions
 class TestUserAuth(BaseCase):
     exclude_params = [
         ("no_cookies"),
@@ -27,7 +27,7 @@ class TestUserAuth(BaseCase):
         Assertions.assert_json_value_by_name(response2, "user_id", self.user_id_from_auth_method, "user id from auth method is not equal to user_id in check method")
 
     @pytest.mark.parametrize("condition", exclude_params)
-    def test_nagative_auth(self, condition):
+    def test_negative_auth(self, condition):
 
         if condition == 'no_cookies':
             response2 = requests.get("https://playground.learnqa.ru/api/user/auth",
